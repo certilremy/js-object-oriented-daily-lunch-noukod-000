@@ -21,7 +21,7 @@ function createNeighborhood(){
         customers(){
             return store.customers.filter(customer => customer.neighborhoodId === this.id);
         }
-        
+
         meals(){
             return this.deliveries().reduce(function(agg,deivery){
                 if(!agg.includes(deivery.meal())){
